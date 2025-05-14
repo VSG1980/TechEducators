@@ -11,13 +11,16 @@ async function handleSubmit(event) {
 
   console.log(formValues);
 
-  const serverResponse = await fetch("http://localhost:8080/wedding", {
-    method: "POST",
-    body: JSON.stringify(formValues),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+  const serverResponse = await fetch(
+    "https://techeducators-1.onrender.com/wedding",
+    {
+      method: "POST",
+      body: JSON.stringify(formValues),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
   const parsedResponse = await serverResponse.json();
 
   console.log("The parsed servers response is: ", parsedResponse);

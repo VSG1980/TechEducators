@@ -71,7 +71,7 @@ input::placeholder {
 }
 
 input[type="submit"] {
-  background-color: white;
+  background-color: black;
   color: white;
   padding: 0.8rem;
   border: none;
@@ -82,9 +82,9 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: rgb(20, 69, 161);
+  background-color: rgb(117, 116, 116);
   color: white;
-  border: 1px solid #000;
+  border: 1px solid #9e9ea1;
   transform: translateY(-2px);
 }
 
