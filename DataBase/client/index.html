@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Book</title>
+    <script type="module" src="/src/main.js" defer></script>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <marquee
+      >Welcome to our wonderful day please fill in the form below so we can
+      remember it forever
+    </marquee>
+
+    <h1>Wedding Book</h1>
+
+    <form id="form">
+      <label for="name">Guest Name</label>
+      <input type="text" id="name" name="name" placeholder="Name..." />
+
+      <label for="message">Your message to the newly weds.</label>
+      <input
+        type="text"
+        id="message"
+        name="message"
+        placeholder="Your Message...."
+      />
+
+      <input type="submit" value="Submit Message" />
+
+      <section id="books-container"></section>
+    </form>
+  </body>
+</html>

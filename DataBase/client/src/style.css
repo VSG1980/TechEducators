@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+marquee {
+  background-color: #000000;
+  color: white;
+  font-weight: lighter;
+  padding: 0.8rem 0;
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+  border-radius: 1rem;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background: linear-gradient(to bottom, silver, white);
+  color: black;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin: 0.5rem auto 1rem;
+  border-bottom: 3px solid #2c3e50;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"] {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+input[type="submit"] {
+  background-color: white;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(20, 69, 161);
+  color: white;
+  border: 1px solid #000;
+  transform: translateY(-2px);
+}
+
+#books-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#books-container div {
+  border: 1px solid #d4d4d4;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #ffffff;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+#books-container div:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+#books-container p:first-child {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+#books-container p:last-child {
+  color: #555;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  input[type="submit"] {
+    font-size: 0.9rem;
+  }
+}
